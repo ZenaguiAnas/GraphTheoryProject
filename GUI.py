@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import *
+import networkx as nx
+import matplotlib.pyplot as plt
 
 window = tk.Tk()
 window.title("Graph Application")
@@ -15,6 +17,9 @@ window.geometry("800x800")
 
 frame = tk.Frame(window)
 frame.pack(pady=20)
+
+def drawGraph():
+    print("HI")
 
 labelOfFrame = tk.LabelFrame(frame, text="Data input", padx=30, pady=30)
 labelOfFrame.grid(row=0, column=0)
@@ -34,7 +39,7 @@ radioboxTitle.grid(row=1, column=3)
 radioboxTitle = tk.Radiobutton(graphTypeFrame, text="Undirected")
 radioboxTitle.grid(row=2, column=3)
 
-submitButton = tk.Button(labelOfFrame, text="Generate")
+submitButton = tk.Button(labelOfFrame, text="Generate", command=drawGraph)
 submitButton.grid(row=1, column=4, padx=30)
 
 graphFormTitle = tk.Label(window, text="Graph Representation")
