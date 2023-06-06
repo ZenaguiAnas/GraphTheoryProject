@@ -56,11 +56,10 @@ To use the Graph Algorithm GUI, follow these steps:
 
 ## Notes
 
-📌 The code utilizes the **`networkx`** library for graph creation and algorithm implementation, and matplotlib for graph visualization. Make sure these libraries are installed before running the code.
-
-📌 The GUI provides options for selecting graph types, weight types, and algorithms. Users can input graph nodes and edges to generate custom graphs.
-📌 The graph visualization is displayed using the **`matplotlib`** library embedded in the **`Tkinter`** GUI window.
-📌 The algorithm results are shown in the GUI's result label.
-📌 Proper error handling and validation are implemented to handle various scenarios such as empty input, missing start node, and missing weights for weighted graphs.
+    📌 - The code utilizes the **`networkx`** library for graph creation and algorithm implementation, and matplotlib for graph visualization. Make sure these libraries are installed before running the code.
+    📌 - The GUI provides options for selecting graph types, weight types, and algorithms. Users can input graph nodes and edges to generate custom graphs.
+    📌 - The graph visualization is displayed using the **`matplotlib`** library embedded in the **`Tkinter`** GUI window.
+    📌 - The algorithm results are shown in the GUI's result label.
+    📌 - Proper error handling and validation are implemented to handle various scenarios such as empty input, missing start node, and missing weights for weighted graphs.
 
 This concludes the documentation for the Graph Algorithm GUI code. You can use this documentation as a reference to understand the code's structure and functionality.
