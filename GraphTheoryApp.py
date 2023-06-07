@@ -26,8 +26,23 @@ def run_algorithm(algorithm):
         dfs_result = list(nx.dfs_tree(graph, start_node))
         results_label.config(text=f"DFS Result: {dfs_result}")
     elif algorithm == "Dijkstra":
+        negative_weights = False
+        for u, v, w in graph.edges(data="weight"):
+            if w < 0:
+                negative_weights = True
+                break
+
+        if negative_weights:
+            messagebox.showerror("Error", "Graph contains negative weights.")
+            return
+
         dijkstra_result = nx.single_source_dijkstra(graph, start_node)
         results_label.config(text=f"Dijkstra Result: {dijkstra_result[0]}")
+
+    # elif algorithm == "Dijkstra":
+
+        # dijkstra_result = nx.single_source_dijkstra(graph, start_node)
+        # results_label.config(text=f"Dijkstra Result: {dijkstra_result[0]}")
 
 
 def generate_graph():
